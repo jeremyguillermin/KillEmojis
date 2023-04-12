@@ -10,7 +10,8 @@
         {
             "matches": [
                 "https://www.messenger.com/*",
-                "https://www.facebook.com/*"
+                "https://www.facebook.com/*",
+                "https://twitter.com/*" 
             ],
             "js": [
                 "content.js"
