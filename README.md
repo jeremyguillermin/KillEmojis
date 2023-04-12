@@ -13,4 +13,4 @@
 
 ## Utilisation
 
-L'extension fonctionne automatiquement lorsque vous utilisez Messenger. Il n'y a pas de paramètres à configurer ou de boutons à appuyer.
+L'extension fonctionne automatiquement lorsque vous utilisez ces sites. Il n'y a pas de paramètres à configurer ou de boutons à appuyer.
