@@ -1,6 +1,6 @@
 # KillEmojis
 
-- Enlève automatiquement les emojis dans les messages de Messenger.
+- Enlève automatiquement les emojis sur Facebook et dans les messages de Messenger.
 
 ## Installation
 
