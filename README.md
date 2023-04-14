@@ -1,6 +1,6 @@
 # KillEmojis
 
-- Enlève automatiquement les emojis sur Twitter, Facebook/Messenger et bientôt Linkendin.
+- Enlève automatiquement les emojis sur Twitter et Facebook.
 
 ## Installation
 
