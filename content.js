@@ -1,16 +1,3 @@
-// Facebook
-let emojiClass = ".x1kky2od, img[alt^='\\uD83E\\uDD']";
-function removeEmojis() {
-    let emojis = document.querySelectorAll(emojiClass);
-    for (let i = 0; i < emojis.length; i++) {
-        emojis[i].parentNode.removeChild(emojis[i]);
-    }
-}
-var emojis = document.querySelectorAll('img[alt*="🙂"]');
-for (var i = 0; i < emojis.length; i++) {
-  emojis[i].parentNode.removeChild(emojis[i]);
-}
-
 // Twitter
 function removeEmojis() {
   const emojis = document.querySelectorAll('img[src*="/emoji/"]');
@@ -23,9 +10,31 @@ function removeEmojis() {
   });
 }
 removeEmojis();
-
-// Linkendin
-
-// ##################################
-removeEmojis(); // Exe function 
 setInterval(removeEmojis, 1000);
+
+// Facebook
+function removeEmojisFacebook() {
+  const emojis = document.querySelectorAll('img[src*="/emoji.php"]');
+  emojis.forEach(emoji => {
+    const emojiParent = emoji.parentElement;
+    const emojiText = emoji.getAttribute('alt');
+    if (emojiParent !== null) {
+      emojiParent.textContent = emojiParent.textContent.replace(emojiText, '');
+    }
+  });
+}
+setInterval(removeEmojisFacebook, 1000);
+
+// Messenger
+function removeMessengerEmojis() {
+  const emojiClass = "img._3n1d img.emoji";
+  const emojis = document.querySelectorAll(emojiClass);
+  emojis.forEach(emoji => {
+    const emojiParent = emoji.parentElement;
+    const emojiText = emoji.alt;
+    if (emojiParent !== null) {
+      emojiParent.textContent = emojiParent.textContent.replace(emojiText, '');
+    }
+  });
+}
+setInterval(removeMessengerEmojis, 1000);

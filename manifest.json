@@ -9,9 +9,9 @@
     "content_scripts": [
         {
             "matches": [
-                "https://www.messenger.com/*",
+                "https://twitter.com/*",
                 "https://www.facebook.com/*",
-                "https://twitter.com/*" 
+                "https://www.messenger.com/*"
             ],
             "js": [
                 "content.js"
