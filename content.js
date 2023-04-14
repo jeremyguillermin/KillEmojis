@@ -10,7 +10,7 @@ function removeEmojis() {
   });
 }
 removeEmojis();
-setInterval(removeEmojis, 1000);
+setInterval(removeEmojis, 500);
 
 // Facebook
 function removeEmojisFacebook() {
