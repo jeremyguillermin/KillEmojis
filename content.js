@@ -5,12 +5,14 @@ function removeEmojis() {
     const emojiParent = emoji.parentElement;
     if (emojiParent !== null) {
       const emojiText = emoji.alt;
-      emojiParent.textContent = emojiParent.textContent.replace(emojiText, '');
+      const space = document.createTextNode(' '); // Crée un espace
+      emojiParent.replaceChild(space, emoji); // Remplace l'emoji par un espace
     }
   });
 }
 removeEmojis();
 setInterval(removeEmojis, 500);
+
 
 // Facebook
 function removeEmojisFacebook() {

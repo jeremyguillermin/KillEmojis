@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
-    "name": "Remove Messenger Emojis",
+    "name": "Remove Emojis",
     "version": "1.0",
-    "description": "Removes emojis from Messenger",
+    "description": "Removes emojis from Twitter, Facebook and Messenger",
     "permissions": [
         "activeTab"
     ],
@@ -11,7 +11,8 @@
             "matches": [
                 "https://twitter.com/*",
                 "https://www.facebook.com/*",
-                "https://www.messenger.com/*"
+                "https://www.messenger.com/*",
+                "https://www.youtube.com/*"
             ],
             "js": [
                 "content.js"
