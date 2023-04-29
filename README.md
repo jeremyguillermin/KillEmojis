@@ -1,16 +1,22 @@
 # KillEmojis
 
-- Enlève automatiquement les emojis sur Twitter et Facebook.
+This browser extension helps you remove emojis from popular social media platforms like Twitter, Facebook, and Messenger. The extension is designed to improve readability by removing emojis from the content you browse.
+
+## Features
+
+- Removes emojis from Twitter, Facebook, and Messenger.
+- Preserves the clickable links in tweets when emojis are removed.
 
 ## Installation
 
-1. Clonez ou téléchargez ce repository.
-2. Ouvrez Google Chrome ou Brave.
-3. Allez sur la page des extensions en tapant `chrome://extensions` ou `brave://extensions` dans la barre d'adresse.
-4. Activez le "Mode développeur".
-5. Cliquez sur "Chargez l'extension non empaquetée" et sélectionnez le dossier où se trouvent les fichiers de l'extension.
-6. L'extension est maintenant installée et activée !
+1. Download the repository as a ZIP file or clone it using Git.
+2. Open your browser's extension settings page.
+- For Google Chrome: Go to chrome://extensions/
+- For Mozilla Firefox: Go to about:addons
+3. Enable the "Developer mode" toggle (for Chrome) or click on the gear icon and choose "Debug Add-ons" (for Firefox).
+4. Click on "Load unpacked extension" (for Chrome) or "Load Temporary Add-on" (for Firefox) and select the unzipped folder or the manifest.json file inside the downloaded repository.
 
-## Utilisation
+Now the extension should be installed, and you should see the Emoji Remover icon in your browser's toolbar. It will automatically start removing emojis from the supported platforms.
 
-L'extension fonctionne automatiquement lorsque vous utilisez ces sites. Il n'y a pas de paramètres à configurer ou de boutons à appuyer.
+## Contributing
+Contributions are welcome! Feel free to open a pull request or create an issue if you have suggestions for improvements or if you've found a bug.
