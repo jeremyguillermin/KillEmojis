@@ -11,8 +11,8 @@ This browser extension helps you remove emojis from popular social media platfor
 
 1. Download the repository as a ZIP file or clone it using Git.
 2. Open your browser's extension settings page.
-- For Google Chrome: Go to chrome://extensions/
-- For Mozilla Firefox: Go to about:addons
+          - For Google Chrome: Go to chrome://extensions/
+          - For Mozilla Firefox: Go to about:addons
 3. Enable the "Developer mode" toggle (for Chrome) or click on the gear icon and choose "Debug Add-ons" (for Firefox).
 4. Click on "Load unpacked extension" (for Chrome) or "Load Temporary Add-on" (for Firefox) and select the unzipped folder or the manifest.json file inside the downloaded repository.
 
