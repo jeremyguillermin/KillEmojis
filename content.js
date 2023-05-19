@@ -1,42 +1,45 @@
-// Twitter
-function removeEmojis() {
-  const emojis = document.querySelectorAll('img[src*="/emoji/"]');
+// Définition des règles pour chaque plateforme
+const platforms = {
+  twitter: {
+    emojiSelectors: 'img[src*="/emoji/"]',
+    replacement: ' ',
+  },
+  facebook: {
+    emojiSelectors: 'img[src*="/emoji.php"], img[src^="data:image/svg+xml"], span.x3nfvp2',
+    replacement: '',
+  },
+  messenger: {
+    emojiSelectors: 'img._3n1d img.emoji',
+    replacement: (emoji, parent) => parent.textContent.replace(emoji.alt, ''),
+  },
+};
+
+// Fonction pour supprimer les emojis
+function removeEmojis(platform) {
+  const { emojiSelectors, replacement } = platforms[platform];
+  const emojis = document.querySelectorAll(emojiSelectors);
   emojis.forEach(emoji => {
-    const emojiParent = emoji.parentElement;
-    if (emojiParent !== null) {
-      const emojiText = emoji.alt;
-      const space = document.createTextNode(' '); // Crée un espace
-      emojiParent.replaceChild(space, emoji); // Remplace l'emoji par un espace
+    const parent = emoji.parentElement;
+    if (parent !== null) {
+      const newContent = typeof replacement === 'function' ? replacement(emoji, parent) : replacement;
+      const newNode = document.createTextNode(newContent);
+      parent.replaceChild(newNode, emoji);
     }
   });
 }
-removeEmojis();
-setInterval(removeEmojis, 500);
 
-
-// Facebook
-function removeEmojisFacebook() {
-  const emojis = document.querySelectorAll('img[src*="/emoji.php"]');
-  emojis.forEach(emoji => {
-    const emojiParent = emoji.parentElement;
-    const emojiText = emoji.getAttribute('alt');
-    if (emojiParent !== null) {
-      emojiParent.textContent = emojiParent.textContent.replace(emojiText, '');
+// Fonction pour supprimer les posts sponsorisés
+function removeSponsoredPosts() {
+  const posts = document.querySelectorAll('div[data-pagelet*="FeedUnit_"]');
+  posts.forEach(post => {
+    if (post.innerText.includes('Sponsored')) {
+      post.style.display = 'none';
     }
   });
 }
-setInterval(removeEmojisFacebook, 1000);
 
-// Messenger
-function removeMessengerEmojis() {
-  const emojiClass = "img._3n1d img.emoji";
-  const emojis = document.querySelectorAll(emojiClass);
-  emojis.forEach(emoji => {
-    const emojiParent = emoji.parentElement;
-    const emojiText = emoji.alt;
-    if (emojiParent !== null) {
-      emojiParent.textContent = emojiParent.textContent.replace(emojiText, '');
-    }
-  });
-}
-setInterval(removeMessengerEmojis, 1000);
+// Appel des fonctions à intervalles réguliers
+setInterval(() => removeEmojis('twitter'), 500);
+setInterval(() => removeEmojis('facebook'), 1000);
+setInterval(() => removeEmojis('messenger'), 1000);
+setInterval(removeSponsoredPosts, 1000);
