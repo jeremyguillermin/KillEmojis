@@ -11,8 +11,7 @@
             "matches": [
                 "https://twitter.com/*",
                 "https://www.facebook.com/*",
-                "https://www.messenger.com/*",
-                "https://www.youtube.com/*"
+                "https://www.messenger.com/*"
             ],
             "js": [
                 "content.js"

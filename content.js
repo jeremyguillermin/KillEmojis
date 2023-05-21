@@ -5,7 +5,7 @@ const platforms = {
     replacement: ' ',
   },
   facebook: {
-    emojiSelectors: 'img[src*="/emoji.php"], img[src^="data:image/svg+xml"], span.x3nfvp2',
+    emojiSelectors: 'img[src*="/emoji.php"], img[src^="data:image/svg+xml"]',
     replacement: '',
   },
   messenger: {
