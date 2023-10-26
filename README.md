@@ -1,10 +1,10 @@
 # KillEmojis
 
-This browser extension helps you remove emojis from popular social media platforms like Twitter, Facebook, and Messenger. The extension is designed to improve readability by removing emojis from the content you browse.
+This browser extension helps you remove emojis from popular social media platforms like Twitter, Bluesky and Facebook. The extension is designed to improve readability by removing emojis from the content you browse.
 
 ## Features
 
-- Removes emojis from Twitter, Facebook, and Messenger.
+- Removes emojis from Twitter, Bluesky, Facebook, and Messenger.
 - Preserves the clickable links in tweets when emojis are removed.
 
 ## Installation
