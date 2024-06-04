@@ -10,10 +10,12 @@
         {
             "matches": [
                 "https://twitter.com/*",
-                "https://tweetdeck.twitter.com/*",
+                "https://www.tweetdeck.twitter.com/*",
                 "https://www.facebook.com/*",
                 "https://www.messenger.com/*",
-                "https://bsky.app/*"
+                "https://www.youtube.com/*",
+                "https://bsky.app/*",
+                "https://x.com/*"
             ],
             "js": [
                 "content.js"
